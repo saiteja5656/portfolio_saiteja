@@ -480,3 +480,7 @@ footer {
 footer p {
   text-align: center;
 }
+
+.contact-info-upper-container{
+gap :1rem;
+}
