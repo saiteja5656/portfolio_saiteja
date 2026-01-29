@@ -223,6 +223,16 @@ section {
   margin: auto 0;
 }
 
+.section_pic-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.35);
+}
+
+
 .section__text {
   align-self: center;
   text-align: center;
