@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Teja Reddy · Software Engineer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Software Engineer with 2.5+ years at Optum (UnitedHealth Group). Full-stack developer specializing in Java, Spring Boot, Angular, and automation. Based in Dublin, Ireland." />
+    <meta name="keywords"
+        content="Software Engineer, Full Stack Developer, Java, Spring Boot, Angular, React, Dublin, Ireland, Optum, UnitedHealth Group" />
+    <meta name="author" content="Yeldandi Sai Teja Reddy" />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sai Teja Reddy - Software Engineer Portfolio" />
+    <meta property="og:description"
+        content="Full-stack developer with 2.5+ years at Optum. Expertise in Java, Spring Boot, Angular, and automation workflows." />
+    <meta property="og:url" content="https://saiteja5656.github.io/portfolio_saiteja/" />
+    <meta property="og:image" content="https://saiteja5656.github.io/portfolio_saiteja/assets/Sai_Final_Photo1.jpg" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sai Teja Reddy - Software Engineer" />
+    <meta name="twitter:description"
+        content="Full-stack developer with expertise in Java, Spring Boot, and Angular. Based in Dublin, Ireland." />
+    <meta name="twitter:image" content="https://saiteja5656.github.io/portfolio_saiteja/assets/Sai_Final_Photo1.jpg" />
+
+    <!-- Favicon - You can generate one at https://favicon.io/ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yeldandi Sai Teja Reddy",
+      "jobTitle": "Software Engineer",
+      "description": "Software Engineer with 2.5+ years at Optum (UnitedHealth Group) specializing in full-stack development with Java, Spring Boot, and Angular",
+      "url": "https://saiteja5656.github.io/portfolio_saiteja/",
+      "image": "https://saiteja5656.github.io/portfolio_saiteja/assets/Sai_Final_Photo1.jpg",
+      "email": "yeldandisaiteja5656@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dublin",
+        "addressCountry": "Ireland"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Munster Technological University",
+          "description": "MSc Data Science & Analytics"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Bachelor of Technology in Computer Science Engineering"
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Optum",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "UnitedHealth Group"
+        }
+      },
+      "knowsAbout": [
+        "Java",
+        "Spring Boot",
+        "Angular",
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "MySQL",
+        "REST APIs",
+        "ServiceNow",
+        "Jenkins",
+        "Full-Stack Development",
+        "Software Engineering"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/saitejareddy-yeldandi",
+        "https://github.com/SaiTejaReddyYeldandi"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Desktop Nav -->
+    <nav id="desktop-nav">
+        <div class="logo">Sai's Portfolio</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <img id="modeToggle" class="icon color-icon" src="./assets/theme_light.png"
+                        src-light="./assets/theme_light.png" src-dark="./assets/theme_dark.png"
+                        alt="Color theme icon" />
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav id="hamburger-nav">
+        <div class="logo">Sai's Portfolio</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li>
+                    <img id="modeToggle2" class="icon color-icon" src="./assets/theme_light.png"
+                        src-light="./assets/theme_light.png" src-dark="./assets/theme_dark.png"
+                        alt="Color theme icon" />
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile -->
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/Sai_Final_Photo1.jpg" alt="Sai profile pic" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Yeldandi Sai Teja Reddy</h1>
+            <p class="section__text__p2">Software Engineer & Data Science Graduate</p>
+            <!-- <p class="section__text__p2">
+                <span class="auto-type"></span>
+            </p> -->
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Sai_Resume.pdf')">
+                    Download Resume
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+
+            <div id="socials-container">
+                <img src="./assets/linkedin_light.png" src-light="./assets/linkedin_light.png"
+                    src-dark="./assets/linkedin_dark.png" alt="My LinkedIn profile" class="icon linkedin-icon"
+                    onclick="location.href='https://www.linkedin.com/in/saitejareddy-yeldandi'" />
+                <img src="./assets/github_light.png" src-light="./assets/github_light.png"
+                    src-dark="./assets/github_dark.png" alt="My GitHub profile" class="icon github-icon"
+                    onclick="location.href='https://github.com/SaiTejaReddyYeldandi'" />
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+
+        <div class="section-container">
+            <!-- if you want to add picture back then uncomment below code -->
+            <!-- <div class="section__pic-container">
+                <img
+                    src="./assets/about-pic.png"
+                    alt="Profile picture"
+                    class="about-pic"
+                />
+            </div> -->
+
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience_light.png" src-light="./assets/experience_light.png"
+                            src-dark="./assets/experience_dark.png" alt="Experience icon" class="icon" />
+                        <h3>Experience</h3>
+                        <p>2.5+ years<br />Software Engineer (Optum)</p>
+                    </div>
+
+                    <div class="details-container">
+                        <img src="./assets/education_light.png" src-light="./assets/education_light.png"
+                            src-dark="./assets/education_dark.png" alt="Education icon" class="icon" />
+                        <h3>Education</h3>
+                        <p>MSc Data Science & Analytics (MTU)<br />B.Tech Computer Science Engineering</p>
+                    </div>
+                </div>
+
+                <div class="text-container">
+                    <p>
+                        I’m a Software Engineer with 2.5+ years of experience at Optum (UnitedHealth Group), building
+                        and maintaining
+                        production-grade full-stack healthcare applications used by internal enterprise teams.
+                        <br /><br />
+                        My work focuses on designing clean, reliable backend services and user-centric interfaces,
+                        integrating REST APIs,
+                        and improving automation workflows to reduce operational overhead. I’ve contributed to systems
+                        handling
+                        high-volume requests, reduced manual QA effort by ~40%, and supported large-scale validation and
+                        decommissioning projects involving 1200+ production requests.
+                        <br /><br />
+                        Technically, I work across Java, Spring Boot, SQL databases, and modern frontend frameworks,
+                        with growing
+                        experience in cloud, DevOps, and data-driven systems through my MSc in Data Science & Analytics.
+                        <br /><br />
+                        Currently based in Dublin, I’m seeking Software Engineer roles where I can build scalable
+                        backend or full-stack
+                        systems, contribute to real-world production platforms, and grow as an engineer working on
+                        impactful products.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <img src="./assets/arrow_light.png" src-light="./assets/arrow_light.png" src-dark="./assets/arrow_dark.png"
+            alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+
+    <!-- Experience -->
+    <!-- Technical Skills -->
+    <section id="experience">
+        <p class="section__text__p1">Expertise</p>
+        <h1 class="title">Technical Skills</h1>
+
+        <div class="skills-grid-container">
+
+            <!-- Card 1: Programming Languages -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-blue"></div>
+                    <h3 class="skill-category-title">Programming Languages</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">C (Basics)</span>
+
+                </div>
+            </div>
+
+            <!-- Card 2: Frontend Technologies -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-green"></div>
+                    <h3 class="skill-category-title">Frontend Technologies</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Backend Technologies -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-purple"></div>
+                    <h3 class="skill-category-title">Backend Technologies</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">REST API Development</span>
+                    <span class="skill-tag">Spring Data JPA</span>
+                    <span class="skill-tag">Hibernate</span>
+                </div>
+            </div>
+
+            <!-- Card 4: Databases -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-orange"></div>
+                    <h3 class="skill-category-title">Databases</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Microsoft SQL Server</span>
+                    <span class="skill-tag">Redis</span>
+                </div>
+            </div>
+
+            <!-- Card 5: Cloud & DevOps -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-cyan"></div>
+                    <h3 class="skill-category-title">Cloud & DevOps</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">AWS (Basics)</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes (Basics)</span>
+                    <span class="skill-tag">CI/CD</span>
+                </div>
+            </div>
+
+            <!-- Card 6: Tools & Frameworks -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-pink"></div>
+                    <h3 class="skill-category-title">Tools & Frameworks</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">ServiceNow</span>
+                    <span class="skill-tag">TestNG</span>
+                    <span class="skill-tag">Selenium</span>
+                </div>
+            </div>
+
+            <!-- Card 7: Methodologies -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-yellow"></div>
+                    <h3 class="skill-category-title">Methodologies</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Agile</span>
+                    <span class="skill-tag">SDLC</span>
+                    <span class="skill-tag">UAT</span>
+                    <span class="skill-tag">Test Automation</span>
+                </div>
+            </div>
+
+            <!-- Card 8: Data & Analytics -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-purple"></div>
+                    <h3 class="skill-category-title">Data & Analytics</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Data Cleaning</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">Web Scraping</span>
+                </div>
+            </div>
+
+            <!-- Card 9: AI & Machine Learning -->
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-accent accent-blue"></div>
+                    <h3 class="skill-category-title">AI & Machine Learning</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">Convolutional Neural Networks (CNNs)</span>
+                    <span class="skill-tag">Image Classification</span>
+                    <span class="skill-tag">Time Series Forecasting</span>
+                </div>
+            </div>
+
+        </div>
+
+        <img src="./assets/arrow_light.png" src-light="./assets/arrow_light.png" src-dark="./assets/arrow_dark.png"
+            alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <p class="section__text__p1">Featured Projects</p>
+        <h1 class="title">Portfolio</h1>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem; color: var(--secondary-color-2);">
+            A selection of projects showcasing my expertise in full-stack development and data science
+        </p>
+
+        <div class="experience-details-container">
+            <div class="about-containers">
+
+                <!-- Project 1: Employee Management System -->
+                <div class="details-container color-container">
+                    <div class="project-header">
+                        <h2 class="experience-sub-title project-title">Employee Management System</h2>
+                        <p class="project-subtitle">CRUD-Based React Web Application</p>
+                    </div>
+
+                    <div class="project-details-scrollable">
+                        <p class="project-description">
+                            Designed and implemented a CRUD-based employee management system following enterprise
+                            application standards. Built RESTful services, implemented database integration, and
+                            developed a
+                            responsive frontend to manage employees and departments.
+                        </p>
+
+                        <!-- Feature Badges -->
+                        <div class="project-features">
+                            <span class="feature-badge">CRUD Operations</span>
+                            <span class="feature-badge">Database Integration</span>
+                            <span class="feature-badge">Responsive UI</span>
+                            <span class="feature-badge">Enterprise Standards</span>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">REST APIs</span>
+                        </div>
+
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/SaiTejaReddyYeldandi/Software_Engineer'">
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Rotten Potatoes -->
+                <div class="details-container color-container">
+                    <div class="project-header">
+                        <h2 class="experience-sub-title project-title">Rotten Tomatoes Movie Review Platform</h2>
+                        <p class="project-subtitle">Angular-Based Web Application</p>
+                    </div>
+
+                    <div class="project-details-scrollable">
+                        <p class="project-description">
+                            User-facing movie review web application featuring authentication, movie listings, and
+                            detailed
+                            review pages. Implemented structured routing, reusable UI components, and dynamic content
+                            rendering for a responsive interface.
+                        </p>
+
+                        <!-- Feature Badges -->
+                        <div class="project-features">
+                            <span class="feature-badge">Authentication</span>
+                            <span class="feature-badge">Movie Listings</span>
+                            <span class="feature-badge">Review System</span>
+                            <span class="feature-badge">Dynamic Routing</span>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">REST APIs</span>
+                        </div>
+
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/SaiTejaReddyYeldandi'">
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Time Series Forecasting -->
+                <div class="details-container color-container">
+                    <div class="project-header">
+                        <h2 class="experience-sub-title project-title">Time Series Forecasting Platform</h2>
+                        <p class="project-subtitle">MSc Major Project</p>
+                    </div>
+
+                    <div class="project-details-scrollable">
+                        <p class="project-description">
+                            End-to-end forecasting platform integrating statistical and deep learning models including
+                            ARIMA, LSTM, BiLSTM, and Transformer. Built reusable data preprocessing pipelines with
+                            FinBERT
+                            sentiment integration.
+                        </p>
+
+                        <!-- Feature Badges -->
+                        <div class="project-features">
+                            <span class="feature-badge">Model Training</span>
+                            <span class="feature-badge">Hyperparameter Tuning</span>
+                            <span class="feature-badge">Sentiment Analysis</span>
+                            <span class="feature-badge">Production-Ready</span>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">ARIMA</span>
+                            <span class="tech-badge">LSTM</span>
+                            <span class="tech-badge">Transformer</span>
+                            <span class="tech-badge">FinBERT</span>
+                            <span class="tech-badge">Deep Learning</span>
+                        </div>
+
+                        <div class="btn-container">
+                            <button class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/SaiTejaReddyYeldandi'">
+                                Github
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <img src="./assets/arrow_light.png" src-light="./assets/arrow_light.png" src-dark="./assets/arrow_dark.png"
+            alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email_light.png" src-light="./assets/email_light.png"
+                    src-dark="./assets/email_dark.png" alt="Email icon" class="icon contact-icon email-icon" />
+                <p>
+                    <a href="mailto:yeldandisaiteja5656@gmail.com">yeldandisaiteja5656@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="contact-info-container">
+                <img src="./assets/linkedin_light.png" src-light="./assets/linkedin_light.png"
+                    src-dark="./assets/linkedin_dark.png" alt="My LinkedIn profile" class="icon linkedin-icon"
+                    onclick="location.href='https://www.linkedin.com/in/saitejareddy-yeldandi'" />
+                <p>
+                    <a href="https://www.linkedin.com/in/saitejareddy-yeldandi">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2026 Sai Teja. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
