@@ -153,4 +153,15 @@
   .details-container {
     margin: 0 0.5rem;
   }
+
+  /* Projects Mobile Layout Fixes */
+  .project-header,
+  .project-description {
+    min-height: auto;
+  }
+
+  .project-details-scrollable {
+    max-height: none;
+    overflow-y: visible;
+  }
 }

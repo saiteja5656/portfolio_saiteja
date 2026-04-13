@@ -51,3 +51,19 @@ function setLightMode() {
     icon.src = icon.getAttribute("src-light");
   });
 }
+
+// Show More / Show Less Projects Toggle
+function toggleMoreProjects() {
+  const hiddenRow = document.getElementById("moreProjects");
+  const btn = document.getElementById("showMoreProjectsBtn");
+
+  if (hiddenRow.classList.contains("expanded")) {
+    hiddenRow.classList.remove("expanded");
+    btn.textContent = "Show More Projects ▼";
+    // Scroll back to projects section top
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+  } else {
+    hiddenRow.classList.add("expanded");
+    btn.textContent = "Show Less Projects ▲";
+  }
+}
