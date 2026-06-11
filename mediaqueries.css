@@ -12,6 +12,10 @@
   #projects {
     height: fit-content;
   }
+
+  #projects .about-containers {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -44,6 +48,33 @@
 
   section {
     margin: 0 5%;
+  }
+
+  #projects .about-containers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Stack skills: main grid on top, side panel below as a full-width strip */
+  .skills-layout {
+    flex-direction: column;
+  }
+
+  .skills-grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skills-side-panel {
+    flex: 1 1 auto;
+  }
+
+  .skills-side-scroll {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .skills-side-scroll .skill-card {
+    flex: 0 0 280px;
   }
 
   .section__pic-container {
@@ -147,7 +178,19 @@
 
   .skills-grid-container {
     grid-template-columns: 1fr;
+  }
+
+  .skills-layout {
     padding: 1rem;
+  }
+
+  .skills-side-scroll {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+  .skills-side-scroll .skill-card {
+    flex: 1 1 auto;
   }
 
   .details-container {
@@ -163,5 +206,9 @@
   .project-details-scrollable {
     max-height: none;
     overflow-y: visible;
+  }
+
+  #projects .about-containers {
+    grid-template-columns: 1fr;
   }
 }

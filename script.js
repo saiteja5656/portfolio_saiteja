@@ -67,3 +67,29 @@ function toggleMoreProjects() {
     btn.textContent = "Show Less Projects ▲";
   }
 }
+
+// ── Role Cycling ──────────────────────────────────────────────
+(function initRoleCycle() {
+  const items = document.querySelectorAll('#roleCycle .role-item');
+  if (!items.length) return;
+
+  let current = 0;
+
+  setInterval(() => {
+    const prev = current;
+    current = (current + 1) % items.length;
+
+    // Mark previous as exiting (slides up)
+    items[prev].classList.remove('role-active');
+    items[prev].classList.add('role-exit');
+
+    // After transition completes, clean up exit class
+    items[prev].addEventListener('transitionend', function onEnd() {
+      items[prev].classList.remove('role-exit');
+      items[prev].removeEventListener('transitionend', onEnd);
+    });
+
+    // Bring in the next one from below
+    items[current].classList.add('role-active');
+  }, 2000);
+})();

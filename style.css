@@ -514,6 +514,14 @@ article .icon {
   border-color: var(--container-border);
 }
 
+/* Cards inside the projects grid stretch to fill row height */
+#projects .details-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 /* Project Header Section (Fixed) */
 .project-header {
   padding: 0 1.5rem 1rem;
@@ -695,20 +703,116 @@ footer p {
   color: var(--secondary-color-2);
 }
 
-/* 2. The element that holds the text - now static */
-.auto-type::after {
-  content: "Software Engineer (Full-Stack · Java · Spring Boot)";
+/* ── Role Cycling Animation ────────────────────────────────── */
+.role-cycle {
   display: block;
+  position: relative;
+  height: 2.4rem;          /* clip window: one line tall */
+  overflow: hidden;
+  width: 100%;             /* span the full text column so long roles aren't clipped */
+}
+
+.role-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;      /* center within full width instead of translateX */
+  transform: translateY(120%);
+  opacity: 0;
+  white-space: nowrap;
+  color: var(--secondary-color-2);
+  font-weight: 600;
+  font-size: clamp(0.7rem, 3vw, 1.75rem);  /* scales down so long roles fit on small screens */
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity   0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+/* Active: slide into view from below */
+.role-item.role-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Exiting: slide up and out */
+.role-item.role-exit {
+  transform: translateY(-120%);
+  opacity: 0;
 }
 
 /* TECHNICAL SKILLS SECTION */
-.skills-grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Skills layout: main 3x3 grid + scrollable side panel */
+.skills-layout {
+  display: flex;
+  align-items: stretch;
   gap: 2rem;
-  padding: 2rem 0;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.skills-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Scrollable side panel holding the extra skill cards */
+.skills-side-panel {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--primary-color);
+  border: 1px solid var(--container-border);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  min-height: 0;
+}
+
+.skills-side-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--container-border);
+}
+
+.skills-side-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--container-border) transparent;
+}
+
+.skills-side-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.skills-side-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.skills-side-scroll::-webkit-scrollbar-thumb {
+  background: var(--container-border);
+  border-radius: 3px;
+}
+
+.skills-side-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color-2);
+}
+
+/* Side cards sit on the panel's own background, so give them a contrasting fill */
+.skills-side-scroll .skill-card {
+  background: var(--primary-color-2);
 }
 
 .skill-card {
@@ -831,18 +935,33 @@ footer p {
   box-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
 }
 
+/* PROJECT ROWS - 3-column grid layout */
+#projects .about-containers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Section height: auto so expanded hidden rows don't get clipped */
+#projects {
+  height: auto;
+  min-height: 96vh;
+}
+
 /* PROJECTS SHOW MORE / LESS */
 .projects-hidden-row {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.6s ease, opacity 0.4s ease, margin 0.4s ease;
+  transition: max-height 0.8s ease, opacity 0.5s ease, margin 0.4s ease;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
 .projects-hidden-row.expanded {
-  max-height: 2000px;
+  max-height: 6000px;
   opacity: 1;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
