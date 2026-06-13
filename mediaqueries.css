@@ -125,6 +125,26 @@
     font-size: 1rem;
   }
 
+  /* Keep the long email inside the rounded box on small screens */
+  .contact-info-upper-container {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-info-container {
+    min-width: 0;
+  }
+
+  .contact-info-container p {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .email-link {
+    font-size: 0.85rem;
+  }
+
   .experience-sub-title {
     font-size: 1.25rem;
   }
