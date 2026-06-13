@@ -58,13 +58,28 @@ function toggleMoreProjects() {
   const btn = document.getElementById("showMoreProjectsBtn");
 
   if (hiddenRow.classList.contains("expanded")) {
+    // Collapse: go from the current full height back down to 0 so it animates.
+    hiddenRow.style.maxHeight = hiddenRow.scrollHeight + "px";
+    void hiddenRow.offsetHeight; // force reflow so the next change animates
     hiddenRow.classList.remove("expanded");
+    hiddenRow.style.maxHeight = "0";
     btn.textContent = "Show More Projects ▼";
     // Scroll back to projects section top
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
   } else {
+    // Expand: size to the actual content height (resize-safe, never clips,
+    // works no matter how many projects are added later).
     hiddenRow.classList.add("expanded");
+    hiddenRow.style.maxHeight = hiddenRow.scrollHeight + "px";
     btn.textContent = "Show Less Projects ▲";
+    // Once expanded, drop the cap entirely so reflow/rotation can't clip it.
+    hiddenRow.addEventListener("transitionend", function onExpand(e) {
+      if (e.propertyName !== "max-height") return;
+      if (hiddenRow.classList.contains("expanded")) {
+        hiddenRow.style.maxHeight = "none";
+      }
+      hiddenRow.removeEventListener("transitionend", onExpand);
+    });
   }
 }
 
