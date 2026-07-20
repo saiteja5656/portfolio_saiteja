@@ -12,7 +12,10 @@ const btn2 = document.getElementById("modeToggle2");
 const themeIcons = document.querySelectorAll(".icon");
 const currentTheme = localStorage.getItem("theme");
 
-if (currentTheme === "dark") {
+// Dark theme is the default; only use light if the visitor explicitly chose it.
+if (currentTheme === "light") {
+  setLightMode();
+} else {
   setDarkMode();
 }
 
